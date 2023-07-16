@@ -62,4 +62,4 @@ The projects section is currently commented out and does not have any CSS rules.
 
 The contact section is currently commented out and does not have any CSS rules. You can uncomment this section and add your own styling if needed.
 
-Feel free to explore the CSS file and modify the styles to fit your own requirements.
+
