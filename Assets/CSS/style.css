@@ -449,8 +449,87 @@ body.dark-theme {
   transform: rotate(15deg);
   opacity: .1;
 }
-/*=============== SERVICES ===============*/
+/*=============== Certificates ===============*/
+.certificates__container {
+  overflow: initial;
+}
+.certificates__content{
+  display: grid;
+  justify-content: center;
+}
+.certificates__img{
+  width: 250px;
+  border-radius: .75rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.certificates__subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
 
+.certificates__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: 1.25rem;
+  margin: .5rem 0 1.25rem;
+}
+
+.certificates__button{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+
+.certificates__button i{
+  font-size: 1rem;
+  transition: transform .3rem;
+}
+
+.certificates__button:hover i{
+  transform: translateX(.25rem)
+}
+/* Swiper class */
+.certificates__container .swiper-button-prev::after,
+.certificates__container .swiper-button-next::after{
+  content:'';
+}
+
+.certificates__container .swiper-button-prev,
+.certificates__container .swiper-button-next{
+  width: initial;
+  height: initial;
+  margin: initial;
+  font-size: 2.5rem;
+  color: var(--title-color)
+}
+.certificates__container .swiper-button-prev{
+  left: -1rem;
+  top: 4.5rem;
+
+}
+.certificates__container .swiper-button-next{
+  right: -1rem;
+  top: 4.5rem;
+
+}
+.certificates__container .swiper-slide{
+  margin-bottom: 4.5rem;
+}
+
+.certificates_container .swiper-pagination-bullets{
+  bottom: 0;
+}
+.certificates_container .swiper-pagination-bullet {
+  background-color: var(--text-color-light);
+  opacity: initial;
+}
+.certificates_container .swiper-pagination-bullet-active {
+  background-color: var(--title-color);
+}
 
 /*=============== PROJECTS ===============*/
 .projects__container {
@@ -533,4 +612,145 @@ body.dark-theme {
 
 
 /*=============== CONTACT ===============*/
+.contact__container{
+  row-gap: 3.5rem;
+}
+.contact__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 2.5rem;
+}
+.contact__title i{
+  font-size: 1rem;
+  font-weight: initial;
+}
+.contact__info,
+.contact__data,
+.contact__form{
+  display: grid;
+}
+.contact__info{
+  row-gap: 5rem;
+}
+.contact__data{
+  row-gap: .75rem;
+}
+.contact__data-title{
+  font-size: var(--biggest-font-size);
+  color: var(--text-color-light);
+  margin-left: 20px;
+}
+.contact__data-info{
+  font-size: var(--bigger-font-size);
+  font-family: var(--title-font);
+  color: var(--title-color);
+  margin-left: 20px;
+
+}
+.contact__button{
+  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--title-color);
+  font-size: var(--bigger-font-size);
+  margin-left: 20px;
+
+}
+.contact__button i{
+  font-size: 1rem;
+  transition: transform .3s;
+}
+.contact__button:hover i{
+  transform: translateX(.25rem);
+
+}
+.contact__form{
+  position: relative;
+  row-gap: 2rem;
+}
+.contact__form-div{
+  position: relative;
+  height: 4rem;
+}
+
+.contact__form-input{
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  border: 2px solid var(--text-color-light);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  font-size: var(--normal-font-size);
+  font-family: var(--title-font);
+  color: var(--title-color);
+  background: none;
+  outline: none;
+  z-index: 1;
+}
+.contact__form-tag{
+  position: absolute;
+  top:-.75rem;
+  left: 27%;
+  z-index: 10;
+  background-color: var(--body-color);
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  padding: .35rem;
+
+}
+
+.contact__form-area{
+  height: 8rem;
+}
+.contact__form-area textarea{
+  resize: none;
+}
+
+.contact__form .contact__button{
+  position: absolute;
+  border: none;
+  background: none;
+  bottom: -15%;
+  right: 10%;
+  left: 75%;
+  font-size: var(--h2-font-size);
+  font-family: var(--title-font);
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  outline: none;
+  margin-top: .75rem;
+}
+
+.contact__form .contact__button i{
+  font-size: 1.5rem;
+  font-weight: initial;
+
+}
+.contact__message{
+  font-size: var(--small-font-size);
+  position: absolute;
+  bottom: -8%;
+  left: 28%;
+  right: 28%;
+  
+}
+/* Status color */
+.color-red{
+  color: hsl(4, 71%, 50%);
+}
+.color-blue{
+  color: hsl(207, 56%, 45%) ;
+}
+.contact__container{
+  row-gap: 3.5rem;
+  margin-bottom: 1in; /* Add margin bottom of 1 inches */
+}
 
