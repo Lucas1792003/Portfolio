@@ -100,3 +100,26 @@ const sendEmail = (e) => {
 
 contactForm.addEventListener('submit', sendEmail)
 
+// =====================DARK LIGHT THEME======================
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme'
+const iconTheme = 'ri-sun-line'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// we obtain the current theme that the interface has by validating the dark-theme classs
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'ri-moon-clear-line' : 'ri-sun-line'
+
+if(selectedTheme){
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'] (darkTheme)
+  document.body.classList[selectedIcon === 'ri-moon-clear-line' ? 'add' : 'remove'] (iconTheme)
+}
+themeButton.addEventListener('click', ()=>{
+  document.body.classList.toggle(darkTheme)
+  themeButton.classList.toggle(iconTheme)
+  localStorage.setItem('selected-theme' , getCurrentTheme())
+  localStorage.setItem('selected-icon' , getCurrentIcon())
+})
